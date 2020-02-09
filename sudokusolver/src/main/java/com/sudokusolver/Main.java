@@ -1,14 +1,16 @@
 package com.sudokusolver;
 
 public class Main {
+static int backtracks = 0;
 
 	public static void main(String[] args) {
 		Puzzle puzzle = new Puzzle();
 		int[][] grid = puzzle.getGrid();
 		if (solveSudoku(grid)) {
 			display(grid);
+			System.out.print(backtracks);
 		} else {
-			System.out.print("Cannot be solved");
+			System.out.print("No Solution");
 		}
 	}
 
@@ -34,6 +36,7 @@ public class Main {
 								return true;
 							} else {
 								grid[row][col] = 0; // BackTracking
+								backtracks++;
 							}
 						}
 					}
