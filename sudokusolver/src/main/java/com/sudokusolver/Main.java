@@ -1,8 +1,5 @@
 package com.sudokusolver;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -15,7 +12,7 @@ public class Main {
 		}
 	}
 
-	//Prints out 2D Sudoku array
+	// Prints out 2D Sudoku array
 	public static void display(int[][] grid) {
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
@@ -33,10 +30,10 @@ public class Main {
 					for (int n = 1; n <= 9; n++) {
 						if (checker(n, row, col, grid)) {
 							grid[row][col] = n;
-							if (solveSudoku(grid)) {  //Recursive Call
+							if (solveSudoku(grid)) { // Recursive Call
 								return true;
 							} else {
-								grid[row][col] = 0; //BackTracking
+								grid[row][col] = 0; // BackTracking
 							}
 						}
 					}
@@ -47,41 +44,35 @@ public class Main {
 		return true;
 	}
 
-	//Verifies the number does not violate any Sudoku constraints 
-	//Returns True if input number passes
-	
+	// Verifies the number does not violate any Sudoku constraints
+	// Returns True if input number passes
 	public static boolean checker(int number, int row, int col, int[][] grid) {
 		// Check Row
-		Set<Integer> rows = new HashSet<Integer>();
 		int i = row;
 		for (int j = 0; j < grid.length; j++) {
-			rows.add(grid[i][j]);
-		}
-		if (!rows.add(number)) {
-			return false;
+			if (grid[i][j] == number) {
+				return false;
+			}
 		}
 		// Check Column
-		Set<Integer> cols = new HashSet<Integer>();
 		i = col;
 		for (int j = 0; j < grid.length; j++) {
-			cols.add(grid[j][i]);
-		}
-		if (!cols.add(number)) {
-			return false;
+			if (grid[j][i] == number) {
+				return false;
+			}
 		}
 		// Check Sector
-		Set<Integer> sector = new HashSet<Integer>();
 		int r = row - row % 3;
 		int c = col - col % 3;
 		for (int y = r; y < (r + 3); y++) {
 			for (int j = c; j < (c + 3); j++) {
-				sector.add(grid[y][j]);
+				if (grid[y][j] == number) {
+					return false;
+				}
 			}
 		}
-		if (!sector.add(number)) {
-			return false;
-		}
-		return true;
+
+		return true; //passes all tests
 	}
 
 }
