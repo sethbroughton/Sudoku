@@ -10,14 +10,12 @@ public class Main {
 		int[][] grid = puzzle.getGrid();
 		if (solveSudoku(grid)) {
 			display(grid);
-		}
-		else {
+		} else {
 			System.out.print("Cannot be solved");
 		}
 	}
 
-//System print
-
+	//Prints out 2D Sudoku array
 	public static void display(int[][] grid) {
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
@@ -27,32 +25,31 @@ public class Main {
 		}
 	}
 
-//Backtracking function	
+//Recursive Backtracking function	
 	public static boolean solveSudoku(int[][] grid) {
-		// grab first empty cell (cell = 0);
 		for (int row = 0; row < grid.length; row++) {
 			for (int col = 0; col < grid.length; col++) {
 				if (grid[row][col] == 0) {
 					for (int n = 1; n <= 9; n++) {
 						if (checker(n, row, col, grid)) {
 							grid[row][col] = n;
-							if (solveSudoku(grid)) {
+							if (solveSudoku(grid)) {  //Recursive Call
 								return true;
-							}
-							else {
-								grid[row][col] = 0;
+							} else {
+								grid[row][col] = 0; //BackTracking
 							}
 						}
-						}
-					return false;
 					}
-	
+					return false;
 				}
 			}
+		}
 		return true;
 	}
 
-//Methods
+	//Verifies the number does not violate any Sudoku constraints 
+	//Returns True if input number passes
+	
 	public static boolean checker(int number, int row, int col, int[][] grid) {
 		// Check Row
 		Set<Integer> rows = new HashSet<Integer>();
@@ -86,6 +83,5 @@ public class Main {
 		}
 		return true;
 	}
-	
-}
 
+}
