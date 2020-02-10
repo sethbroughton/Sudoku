@@ -1,7 +1,7 @@
 package com.sudokusolver;
 
 public class Main {
-static int backtracks = 0;
+static int backtracks = 0; //Sets global counter for number of recursive backtracks to solve puzzle
 
 	public static void main(String[] args) {
 		Puzzle puzzle = new Puzzle();
