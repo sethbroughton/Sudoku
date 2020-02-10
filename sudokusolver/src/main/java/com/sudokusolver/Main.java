@@ -1,14 +1,14 @@
 package com.sudokusolver;
 
 public class Main {
-//static int backtracks = 0; //Sets global counter for number of recursive backtracks to solve puzzle
+static int backtracks = 0; //Sets global counter for number of recursive backtracks to solve puzzle
 
 	public static void main(String[] args) {
 		Puzzle puzzle = new Puzzle();
 		int[][] grid = puzzle.getGrid();
 		if (solveSudoku(grid)) {
 			display(grid);
-			//System.out.print(backtracks);
+			System.out.print(backtracks);
 		} else {
 			//System.out.print("Program timed out");
 		}
@@ -30,13 +30,14 @@ public class Main {
 			for (int col = 0; col < grid.length; col++) {
 				if (grid[row][col] == 0) {
 					for (int n = 1; n <= 9; n++) {
+			
 						if (checker(n, row, col, grid)) {
 							grid[row][col] = n;
 							if (solveSudoku(grid)) { // Recursive Call
 								return true;
 							} else {
 								grid[row][col] = 0; // BackTracking
-								//backtracks++;
+								backtracks++;
 							}
 						}
 					}
