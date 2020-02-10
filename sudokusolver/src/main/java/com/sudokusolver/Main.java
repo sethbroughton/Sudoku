@@ -10,7 +10,7 @@ static int backtracks = 0; //Sets global counter for number of recursive backtra
 			display(grid);
 			System.out.print(backtracks);
 		} else {
-			System.out.print("No Solution");
+			//System.out.print("Program timed out");
 		}
 	}
 
