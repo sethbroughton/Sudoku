@@ -8,9 +8,9 @@ public class Main {
 		int[][] grid = puzzle.getGrid();
 		if (solveSudoku(grid)) {
 			display(grid);
-			//System.out.print(backtracks);
+			System.out.print(backtracks);
 		} else {
-			//System.out.print("Program timed out");
+			System.out.print("Program timed out");
 		}
 	}
 
@@ -36,7 +36,7 @@ public class Main {
 								return true;
 							} else {
 								grid[row][col] = 0; // BackTracking
-								//backtracks++;
+								backtracks++;
 							}
 						}
 					}
