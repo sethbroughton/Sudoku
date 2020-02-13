@@ -2,6 +2,7 @@ package com.sudokusolver;
 
 public class Puzzle {
 
+	
 	/* Blank Grid
  private int[][] grid = { 
  { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
