@@ -29,7 +29,6 @@ public class CheckGuess {
 				}
 			}
 		}
-
 		return true; // passes all tests
 	}
 }

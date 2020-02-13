@@ -6,12 +6,9 @@ public class Main {
 		Puzzle puzzle = new Puzzle();
 		int[][] grid = puzzle.getGrid();
 
-		if (Solver.solveSudoku(grid)) {
+			Solver.solveSudoku(grid);
 			display(grid);
 			System.out.print(Solver.backtracks);
-		} else {
-			System.out.print("Program timed out");
-		}
 	}
 
 	// Prints out 2D Sudoku array
