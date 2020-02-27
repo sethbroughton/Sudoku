@@ -42,6 +42,6 @@ If people like your project they’ll want to learn how they can use it. To do s
 https://www.youtube.com/watch?v=auK3PSZoidc
 
 ## License
-MIT © [https://github.com/sethbroughton]()
+MIT © Seth Broughotn
 
 
