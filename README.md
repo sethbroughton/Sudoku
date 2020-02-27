@@ -12,17 +12,12 @@ Build status of continus integration i.e. travis, appveyor etc. Ex. -
 
 ## Code style
 If you're using any code style like xo, standard etc. That will help others while contributing to your project. Ex. -
-
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
  
 ## Screenshots
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
-Ex. -
 
-<b>Built with</b>
-- [Electron](https://electron.atom.io)
 
 ## Features
 What makes your project stand out?
@@ -45,16 +40,11 @@ If people like your project they’ll want to learn how they can use it. To do s
 
 ## Contribute
 
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
 
 ## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
-
-#### Anything else that seems useful
+https://www.youtube.com/watch?v=auK3PSZoidc
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © [Yourname]()
+MIT © [Seth Broughton]()
 
 
