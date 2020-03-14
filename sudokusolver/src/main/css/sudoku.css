@@ -1,0 +1,41 @@
+:root {
+    --grey: #f2f2f4;
+    --dark-grey: rgba(50, 53, 62, 0.05);
+    --black: rgba(60, 60, 60, 1);
+  }
+  
+  .game-board
+  {
+    width: 600px;
+    height: 600px;
+    border: 3px solid #2c3e50;
+    background-color: #34495e;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  
+  }
+
+  .sector{
+
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #34495e;
+    color: #fff;
+    border: 3px solid #2c3e50;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+ 
+  }
+  
+  .box
+  {
+    border: 6px solid #2c3e50;
+    border-radius: 2px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

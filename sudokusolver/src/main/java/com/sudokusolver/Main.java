@@ -13,7 +13,7 @@ public class Main {
 
 	// Prints out 2D Sudoku array
 	public static void display(int[][] grid) {
-		for (int i = 0; i < 9; i++) {
+		for (int i = 0; i < 9; i++){
 			for (int j = 0; j < 9; j++) {
 				System.out.print(" " + grid[i][j]);
 			}
